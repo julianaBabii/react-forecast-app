@@ -3,6 +3,7 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
 import "./Weather.css";
+import FormatedDate from "./FormatedDate";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -13,7 +14,7 @@ export default function Weather(props) {
       ready: true,
       city: response.data.city,
       temperature: response.data.temperature.current,
-      date: "Tuesday 10:00",
+      date: new Date(response.data.time * 1000),
       description: response.data.condition.description,
       imgUrl: response.data.condition.icon_url,
       humidity: response.data.temperature.humidity,
@@ -48,7 +49,9 @@ export default function Weather(props) {
             <div className="overview">
               <h1>{weatherData.city}</h1>
               <ul>
-                <li>Today: {weatherData.date}</li>
+                <li>
+                  <FormatedDate date={weatherData.date} />
+                </li>
               </ul>
 
               <div className="row ">
