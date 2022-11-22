@@ -1,16 +1,11 @@
 .Weather {
-  padding: 20px;
+  padding: 30px;
   border: 1px solid rgba(43, 35, 90, 1);
   border-radius: 5px;
   max-width: 600px;
-  margin: 30px auto;
+  margin: 20px auto;
+  background: rgb(100, 100, 155);
 
-  background: rgb(179, 138, 183);
-  background: linear-gradient(
-    260deg,
-    rgba(rgb(117, 121, 155)) 100%,
-    rgba(rgb(100, 100, 155)) 10%
-  );
   color: white;
   box-shadow: 5px 5px 20px grey;
 }
@@ -80,5 +75,10 @@
   white-space: nowrap;
 }
 p {
+  color: white;
   text-align: center;
+}
+.Weather a {
+  text-decoration: none;
+  color: white;
 }
