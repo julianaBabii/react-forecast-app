@@ -5,7 +5,13 @@ export default function WeatherTemperature(props) {
     <div className="WeatherTemperature">
       <strong>{Math.round(props.celsius)}</strong>
       <span className="units">
-        <a href="/">°C</a> | <a href="/">°F</a>
+        <a className="link-light text-decoration-none" href="/">
+          °C
+        </a>{" "}
+        |{" "}
+        <a className="link-light text-decoration-none" href="/">
+          °F
+        </a>
       </span>
     </div>
   );

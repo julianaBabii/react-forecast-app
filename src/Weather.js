@@ -3,7 +3,7 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
 import "./Weather.css";
-//import FormatedDate from "./FormatedDate";
+import WeatherForecast from "./WeatherForecast.js";
 import WeatherInfo from "./WeatherInfo";
 
 export default function Weather(props) {
@@ -62,11 +62,15 @@ export default function Weather(props) {
               </div>
             </form>
             <WeatherInfo info={weatherData} />
+            <WeatherForecast />
           </div>
         </div>
         <p>
-          <a href="https://github.com/julianaBabii/react-weather-app">
-            Open-sourced
+          <a
+            className="link-light"
+            href="https://github.com/julianaBabii/react-weather-app"
+          >
+            Open-source
           </a>{" "}
           coded by Juliana Babii{" "}
         </p>
