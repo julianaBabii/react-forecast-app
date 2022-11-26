@@ -8,10 +8,6 @@ export default function WeatherTemperature(props) {
         <a className="link-light text-decoration-none" href="/">
           °C
         </a>{" "}
-        |{" "}
-        <a className="link-light text-decoration-none" href="/">
-          °F
-        </a>
       </span>
     </div>
   );
